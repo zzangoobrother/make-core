@@ -1,17 +1,25 @@
 package com.example.makecore.order;
 
+import com.example.makecore.AppConfig;
 import com.example.makecore.member.Grade;
 import com.example.makecore.member.Member;
 import com.example.makecore.member.MemberService;
 import com.example.makecore.member.MemberServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 class OrderServiceTest {
+    MemberService memberService;
+    OrderService orderService;
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    @BeforeEach
+    public void befor() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @Test
     void createOrder() {

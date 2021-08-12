@@ -1,12 +1,21 @@
 package com.example.makecore.member;
 
+import com.example.makecore.AppConfig;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+
+    MemberService memberService;
+
+    @BeforeEach
+    public void befor() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join() {
