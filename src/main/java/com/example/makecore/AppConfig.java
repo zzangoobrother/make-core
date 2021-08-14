@@ -1,7 +1,7 @@
 package com.example.makecore;
 
 import com.example.makecore.discount.DiscountPolicy;
-import com.example.makecore.discount.FixDiscountPolicy;
+import com.example.makecore.discount.RateDiscountPolicy;
 import com.example.makecore.member.MemberRepository;
 import com.example.makecore.member.MemberService;
 import com.example.makecore.member.MemberServiceImpl;
@@ -24,6 +24,6 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
