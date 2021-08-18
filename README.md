@@ -53,3 +53,6 @@
   3. 가급적 읽기만
 
 ex) https://github.com/zzangoobrother/make-core/tree/master/src/test/java/com/example/makecore/singleton
+
+@Bean을 사용해도 스프링 bean으로 등록되지만, 싱글톤을 보장하지 않는다.
+따라서 스프링 설정은 항상 @Configuration을 사용해야 한다.
