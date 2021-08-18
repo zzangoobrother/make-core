@@ -3,6 +3,8 @@ package com.example.makecore.beandefinition;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class BeanDefinitionTest {
@@ -21,4 +23,5 @@ public class BeanDefinitionTest {
             }
         }
     }
+
 }
