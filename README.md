@@ -51,4 +51,4 @@
   1. 특정 클라이언트 의존적인 필드X
   2. 특정 클라이언트 값 변경 X
   3. 가급적 읽기만
-ex) 
+ex) https://github.com/zzangoobrother/make-core/tree/master/src/test/java/com/example/makecore/singleton
